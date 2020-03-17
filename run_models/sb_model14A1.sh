@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash = 80% (A) (Bi et al)
 #SBATCH --job-name='model14A1'
 #SBATCH --partition=all
 #SBATCH --array=1-4

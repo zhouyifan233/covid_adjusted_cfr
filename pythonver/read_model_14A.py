@@ -76,12 +76,25 @@ mean_constrain_cv_linear = np.mean(constrain_cv_linear, axis=0)
 var_constrain_cv_linear = np.var(constrain_cv_linear, axis=0)
 
 print('mcmc samples mean: ')
-print(mean_constrain_mcmc)
+for ele in mean_constrain_mcmc:
+    print(ele)
+
 print('mcmc samples variance:')
-print(var_constrain_mcmc)
+for ele in var_constrain_mcmc:
+    print(ele)
+
 print('linear cv means: ')
-print(mean_constrain_cv_linear[0:mcmc_dim])
+for ele in mean_constrain_cv_linear[0:mcmc_dim]:
+    print(ele)
+
+
 print('linear cv variance: ')
-print(var_constrain_cv_linear[0:mcmc_dim])
+for ele in var_constrain_cv_linear[0:mcmc_dim]:
+    print(ele)
+
+
 print('improvement: ')
-print(np.mean(var_constrain_mcmc/var_constrain_cv_linear[0:mcmc_dim]))
+imp = var_constrain_mcmc/var_constrain_cv_linear[0:mcmc_dim]
+for ele in imp:
+    print(ele)
+
